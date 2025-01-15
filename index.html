@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSIR-NAL</title>
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- script -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<!-- loader video -->
+<!-- <div class="video-container" id="videoContainer">
+    <video id="introVideo" width="100%" height="100%" autoplay muted>
+        <source src="assets/images/cloudes.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div> -->
+<body id="landing-page">
+    <!-- navbar -->
+    <div class="header">
+        
+        <div class="menu-icon" onclick="openSidebar()">
+            <span class="menu-text">Menu</span>
+            <img src="assets/images/humbarg.svg" alt="">
+        </div>
+        <div class="divider"></div>
+        <div class="logo">
+            <img src="assets/images/logo_white.svg" alt="Logo">
+        </div>
+        <div class="menu-links">
+        <a href="#">Career</a>
+        <a href="#">Partners</a>
+        <a href="#">Tenders</a>
+        <a href="#">Newsroom</a>
+        <a href="#">Services</a>
+        </div>
+        <div class="divider"></div>
+        <div class="search-icon" onclick="toggleSearchBar()">
+            <span class="menu-text">Search</span>
+            <img src="assets/images/search.svg" alt="">
+        </div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <div class="logo-with-text">
+            <img src="assets/images/logo_main.svg" alt="Logo">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">
+                <img src="assets/images/maki_cross.svg" alt="">
+            </a>
+
+        </div>
+            <a href="#">Home</a>
+            <a href="#">Career</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+
+            <div class="menu-links-sidebar">
+                <a href="#">Career</a>
+                <a href="#">Partners</a>
+                <a href="#">Tenders</a>
+                <a href="#">Newsroom</a>
+                <a href="#">Services</a>
+                </div>
+    </div>
+
+    <div id="searchBar" class="search-bar">
+        <div class="text-center h-text-s">What are you looking for?</div>
+        <div class="search-input-button">
+            <input type="text" placeholder="Search...">
+            <button class="Search-button">Search</button>
+        </div>
+        
+        <button class="close-search" onclick="toggleSearchBar()">
+            <img src="assets/images/maki_cross.svg" alt="">
+        </button>
+    </div>
+
+    <!-- hero-slider -->
+    <div class="hero" data-aos="fade-down" data-aos-duration="3000" >
+        <div class="slider-container">
+            <!-- Slider -->
+            <div class="slider" id="slider">
+                <div class="slide active" style="background-image: url('assets/images/slide_1.svg');">
+                    <video id="introVideo" width="100%" height="100%" autoplay muted loop>
+                        <source src="assets/images/cloudes.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="slide" style="background-image: url('assets/images/slide_2.svg');">
+                    <div class="text-content">
+                        <h1>About Us</h1>
+                        <p>We strive for excellence in every project.</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('assets/images/slide_3.svg');">
+                    <div class="text-content">
+                        <h1>Contact Us</h1>
+                        <p>Reach out today to start your journey with us.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Arrows -->
+            <button class="slider-arrow arrow-left" onclick="prevSlide()">
+                <img src="assets/images/left.svg" alt="">
+            </button>
+            <button class="slider-arrow arrow-right" onclick="nextSlide()">
+                <img src="assets/images/right.svg" alt="">
+            </button>
+            <!-- Navigation Dots -->
+            <div class="slider-nav" id="sliderNav">
+                <button class="active" onclick="goToSlide(0)"></button>
+                <button onclick="goToSlide(1)"></button>
+                <button onclick="goToSlide(2)"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- technlogy section  -->
+     <section id="technology-hp" class="mar-50">
+        <div class="container">
+            <div class="carousel-wrapper" data-aos="fade-up"
+            data-aos-duration="2000" >
+                <div class="row">
+                    <div class="heading">
+                        <h2>Technology</h2>
+                        <div class="nav-carousel-hp">
+                            <div class="carousel-nav left" onclick="moveCarousel(-1)">
+                                <img src="assets/images/left_round.png" alt="">
+                            </div>
+                            <div class="carousel-nav right" onclick="moveCarousel(1)">
+                                <img src="assets/images/left_round.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-track" id="carouselTrack" >
+                    <!-- Carousel Items -->
+                    <div class="carousel-item-custom" >
+                        <img src="assets/images/tech1.png" alt="Plane 1">
+                        <div class="carousel-content-hp">
+                            <h6>Electronic Target Systems For Marksmanship Traininga</h6>
+                            <p>Dec 22, 2024 at 19:35  |  Mahfuz Riad</p>
+                        </div>
+                        <div class="carousel-content">
+                            <button class="view-more-btn">Read More</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item-custom">
+                        <img src="assets/images/tech2.png" alt="Plane 1">
+                        <div class="carousel-content-hp">
+                            <h6>HANSA-NG Two Seat Pilot Training Aircraft</h6>
+                            <p>Dec 22, 2024 at 19:35  |  Mahfuz Riad</p>
+                        </div>
+                        <div class="carousel-content">
+                            <button class="view-more-btn">Read More</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item-custom">
+                        <img src="assets/images/tech3.png" alt="Plane 1">
+                        <div class="carousel-content-hp">
+                            <h6>Hardware – In – The Loop Simulation Facility For Mavs</h6>
+                            <p>Dec 22, 2024 at 19:35  |  Mahfuz Riad</p>
+                        </div>
+                        <div class="carousel-content">
+                            <button class="view-more-btn">Read More</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item-custom">
+                        <img src="assets/images/tech4.png" alt="Plane 1">
+                        <div class="carousel-content-hp">
+                            <h6>SARAS Mk2 19 Seater Passenger Aircraft</h6>
+                            <p>Dec 22, 2024 at 19:35  |  Mahfuz Riad</p>
+                        </div>
+                        <div class="carousel-content">
+                            <button class="view-more-btn">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- facilities section -->
+     <section class="facility-section position-relative">
+        <div class="container">
+          <div class="row">
+            <div class="text-center" data-aos="fade-up"
+            data-aos-duration="2000">
+              <h2>Facilities</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center" style="gap: 30px; margin-top: 60px;" data-aos="fade-up"
+          data-aos-duration="3000">
+            <!-- Facility 1 -->
+            <div class="col-md-3 col-lg-2 mb-4 position-relative">
+              <span class="facility-index " style="color: #ff660021;">01</span>
+              <a href="#" class="text-decoration-none">
+                <div class="facility-card hp-ho-1">
+                    <img src="assets/images/facility1.svg" alt="Ground Vibration Facilities">
+                    <h5>Ground Vibration Facilities</h5>
+                  </div>
+              </a>
+            </div>
+            <!-- Facility 2 -->
+            <div class="col-md-3 col-lg-2 mb-4 position-relative">
+              <span class="facility-index" style="color: #6D8A0C21;">02</span>
+              <a href="#" class="text-decoration-none">
+                <div class="facility-card hp-ho-2 ">
+                    <img src="assets/images/facility2.svg" alt="3D Printing Facilities">
+                    <h5>3D Printing Facilities</h5>
+                  </div>
+              </a>
+            </div>
+            <!-- Facility 3 -->
+            <div class="col-md-3 col-lg-2 mb-4 position-relative">
+              <span class="facility-index" style="color: #2D8FFF21;">03</span>
+              <a href="#" class="text-decoration-none">
+                <div class="facility-card hp-ho-3">
+                    <img src="assets/images/facility3.svg" alt="Sub-Component Fatigue Test Facilities">
+                    <h5>Sub-Component Fatigue Test Facilities</h5>
+                  </div>
+              </a>
+            </div>
+            <!-- Facility 4 -->
+            <div class="col-md-3 col-lg-2 mb-4 position-relative">
+              <span class="facility-index" style="color: #FF66CF21;">04</span>
+              <a href="#" class="text-decoration-none">
+                <div class="facility-card hp-ho-4">
+                    <img src="assets/images/facility4.svg" alt="Environmental Test Facilities">
+                    <h5>Environmental Test Facilities</h5>
+                  </div>
+              </a>
+            </div>
+            <!-- Facility 5 -->
+            <div class="col-md-3 col-lg-2 mb-4 position-relative">
+              <span class="facility-index" style="color: #FF003B21;">05</span>
+              <a href="#" class="text-decoration-none">
+                <div class="facility-card hp-ho-5">
+                    <img src="assets/images/facility5.svg" alt="Universal Test Facilities">
+                    <h5>Universal Test Facilities</h5>
+                  </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- video section -->
+
+      <section class="video-section">
+        <div class="container video-container">
+          <div class="row justify-content-center">
+            <!-- Video 1 -->
+            <div class="col-md-5 col-sm-12 mb-4">
+              <div class="video-card" data-aos="fade-right"
+              data-aos-duration="3000">
+                <img src="assets/images/video1.png" alt="Video 1">
+                <a href="assets/images/cloudes.mp4" class="play-icon" title="Play Video 1">
+                  <img src="assets/images/playicon.svg" alt="">
+                </a>
+                <div class="video-description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                </div>
+              </div>
+            </div>
+            <!-- Video 2 -->
+            <div class="col-md-5 col-sm-12 mb-4">
+              <div class="video-card"  data-aos="fade-left"
+              data-aos-duration="3000">
+                <img src="assets/images/video2.png" alt="Video 2">
+                <a href="assets/images/cloudes.mp4" class="play-icon" title="Play Video 2">
+                  <img src="assets/images/playicon.svg" alt="">
+                </a>
+                <div class="video-description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- footer -->
+
+     <section id="footer">
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-uper-section">
+                            <h3 class="text-white">External Links</h3>
+                            <div class="footer-divider"></div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="text-white text-decoration-none">ITUWSTA 2024</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Pariksha Pe Charcha 2023</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">CSIR Technology Showcase</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">CSIR's COVID Portal</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">JIGYASA</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">PRABHASS</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Vidyanjali Volunteer Programme</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">National Government Services</a></li>
+                                      </ul>
+                                </div>
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="text-white text-decoration-none">National Voters' Service...</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">CSIR Website</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Vidya Lakshmi Portal</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">One CSIR</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Digital India</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">National Portal of India</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Kisan Sabha App</a></li>
+                                      </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 border-rside-hp">
+                        <div class="footer-uper-section">
+                            <h3 class="text-white">Information</h3>
+                            <div class="footer-divider"></div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">About CSIR</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Our Mission</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Our Vision</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">NAL Management</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Organization Chart</a></li>
+                                      </ul>
+                                </div>
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="text-white text-decoration-none">Director’s Profile</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Director’s Report</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Past Leaders</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">CSIR-NAl Diamond Jubilee Year</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">History of NAL</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Right To Information</a></li>
+                                      </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-uper-section">
+                            <h3 class="text-white">Internal Links</h3>
+                            <div class="footer-divider"></div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="text-white text-decoration-none">Tender - Purchase</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Annual Procurement Plan</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Tenders- Works & General</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Tender - Purchase Archives</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Check mail</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Guest House</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Handling of Complaints of Sexual Harassment</a></li>
+                                      </ul>
+                                </div>
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="text-white text-decoration-none">MoUs Signed</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Website Poli</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">ICAST</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">FTP</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Cyber Jagrookta</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">AcSIR Phd programme at NAL</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Pensioners Welfare Association (PWA)</a></li>
+                                      </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider-footer-hp"></div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-logo mb-3">
+                            <img src="assets/images/logo_white.svg" alt="CSIR-NAL Logo">
+                          </div>
+                          <div class="footer-about">
+                            <h5>National Aerosdivace Laboratories</h5>
+                            <p>National Aerospace Laboratories (NAL), a constituent of the Council of Scientific and Industrial Research (CSIR), India</p>
+                          </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 border-rside-hp">
+                        <div class="row image-sec-ftr">
+                            <div class="col-6 image-footer-hp">
+                              <img src="assets/images/ftr1.png" alt="ITUWSTA Logo" class="img-fluid">
+                            </div>
+                            <div class="col-6 image-footer-hp">
+                              <img src="assets/images/ftr2.png" alt="CSIR Logo" class="img-fluid">
+                            </div>
+                            <div class="col-6 image-footer-hp">
+                              <img src="assets/images/ftr3.png" alt="G20 Logo" class="img-fluid">
+                            </div>
+                            <div class="col-6 image-footer-hp">
+                              <img src="assets/images/ftr4.png" alt="Digital India Logo" class="img-fluid">
+                            </div>
+                            <div class="col-6 image-footer-hp">
+                              <img src="assets/images/ftr5.png" alt="India.gov.in Logo" class="img-fluid">
+                            </div>
+                            <div class="col-6 image-footer-hp">
+                              <img src="assets/images/ftr6.png" alt="JIGYASA Logo" class="img-fluid">
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="contact-information-footer">
+                                    <div class="icon-with-text-hp">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 20">
+                                            <defs>
+                                              <style>
+                                                .a {
+                                                  fill: #fff;
+                                                }
+                                              </style>
+                                            </defs>
+                                            <path class="a" d="M19,9A7,7,0,1,0,5,9a7,7,0,0,0,1.11,3.77h0L12,22l5.9-9.23h0A7,7,0,0,0,19,9Zm-7,3a3,3,0,1,1,2.12-.88A3,3,0,0,1,12,12Z" transform="translate(-5 -2)"/>
+                                          </svg>
+                                        <p class="content-social-footer">HAL Airport Road, Bangalore 560 017, India.</p>
+                                    </div>
+                                    <div class="icon-with-text-hp">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19.38 19.38">
+                                            <defs>
+                                              <style>
+                                                .a {
+                                                  fill: #fff;
+                                                }
+                                          
+                                                .a, .b {
+                                                  stroke: #fff;
+                                                  stroke-linecap: round;
+                                                  stroke-linejoin: round;
+                                                  stroke-width: 2px;
+                                                }
+                                          
+                                                .b {
+                                                  fill: none;
+                                                }
+                                              </style>
+                                            </defs>
+                                            <path class="a" d="M8,3c.5,0,2.5,4.5,2.5,5,0,1-1.5,2-2,3S9,13,10,14c.39.39,2,2,3,1.5s2-2,3-2c.5,0,5,2,5,2.5a4.36,4.36,0,0,1-3,4,6.89,6.89,0,0,1-4.5,0,10.93,10.93,0,0,1-6-3.5,10.93,10.93,0,0,1-3.5-6A6.89,6.89,0,0,1,4,6,4.36,4.36,0,0,1,8,3Z" transform="translate(-2.63 -2)"/>
+                                            <path class="b" d="M14,7a6.14,6.14,0,0,1,3,3" transform="translate(-2.63 -2)"/>
+                                            <path class="b" d="M15,3.25A8,8,0,0,1,20.75,9" transform="translate(-2.63 -2)"/>
+                                          </svg>
+                                          
+                                        <p class="content-social-footer">91-80-25273351-54 <small>(Kodihalli)</small><br>25223351-54 <small>(Belur)</small> </p>
+                                    </div>
+                                    <div class="icon-with-text-hp">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 17">
+                                            <defs>
+                                              <style>
+                                                .a {
+                                                  fill: #fff;
+                                                }
+                                              </style>
+                                            </defs>
+                                            <path class="a" d="M8,20V4H18V9h1a3,3,0,0,1,3,3v8ZM4.5,21A2.48,2.48,0,0,0,7,18.5v-8A2.48,2.48,0,0,0,4.5,8a2.41,2.41,0,0,0-1.78.73A2.41,2.41,0,0,0,2,10.5v8a2.41,2.41,0,0,0,.72,1.77A2.41,2.41,0,0,0,4.5,21ZM10,9h6V6H10Zm6,5a1,1,0,0,0,.71-.29A.94.94,0,0,0,17,13a1,1,0,1,0-1.71.71A.94.94,0,0,0,16,14Zm3,0a1,1,0,0,0,.71-.29A.94.94,0,0,0,20,13a1,1,0,1,0-1.71.71A.94.94,0,0,0,19,14Zm-3,3a1,1,0,0,0,.71-.29A.94.94,0,0,0,17,16a1,1,0,1,0-1.71.71A.94.94,0,0,0,16,17Zm3,0a1,1,0,0,0,.71-.29A.94.94,0,0,0,20,16a1,1,0,1,0-1.71.71A.94.94,0,0,0,19,17Zm-9,0h4V12H10Z" transform="translate(-2 -4)"/>
+                                          </svg>
+                                        <p class="content-social-footer">91-80-25260862<br>25270670</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1711243957193!2d77.64661878244712!3d12.960899382523891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16773e7dc413%3A0x18f03eb8f14b39a4!2sCSIR%20-%20National%20Aerospace%20Laboratories%20(NAL)!5e0!3m2!1sen!2sin!4v1736492576741!5m2!1sen!2sin" width="147" height="147" style="border:0; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="social-media">
+                                    <a href="#facebook" ><img src="assets/images/facebook.svg" alt=""></a>
+                                    <a href="#instagram" ><img src="assets/images/instagram.svg" alt=""></a>
+                                    <a href="#twitter" ><img src="assets/images/titter.svg" alt=""></a>
+                                    <a href="#youtube" ><img src="assets/images/youtube.svg" alt=""></a>
+                                    <a href="#fax" ><img src="assets/images/faxi.svg" alt=""></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider-footer-hp"></div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="mb-0 text-white">© Copyright 2024 CSIR-NAL. All Rights Reserved</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="mb-0 text-white text-end">Page Last Updated: <span class="date-update"> Dec 20, 2024</span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+     </section>
+    
+
+
+    <!-- script -->
+    <script>
+        const track = document.getElementById('carouselTrack');
+        const items = document.querySelectorAll('.carousel-item-custom');
+        const rootStyles = document.documentElement.style;
+    
+        let itemsVisible = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--items-visible')) || 4;
+        let totalItems = items.length;
+    
+        // Clone first and last items for looping
+        const firstClones = [];
+        const lastClones = [];
+        for (let i = 0; i < itemsVisible; i++) {
+            firstClones.push(items[i].cloneNode(true));
+            lastClones.push(items[totalItems - 1 - i].cloneNode(true));
+        }
+        firstClones.forEach((clone) => track.appendChild(clone));
+        lastClones.reverse().forEach((clone) => track.insertBefore(clone, items[0]));
+    
+        // Update dimensions
+        const itemWidth = track.firstElementChild.clientWidth;
+        let currentIndex = itemsVisible;
+    
+        track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+    
+        function moveCarousel(direction) {
+            currentIndex += direction;
+            track.style.transition = `transform ${parseFloat(rootStyles.getPropertyValue('--slide-speed') || 0.5)}s ease-in-out`;
+            track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+    
+            setTimeout(() => {
+                if (currentIndex === 0) {
+                    currentIndex = totalItems;
+                    track.style.transition = 'none';
+                    track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+                } else if (currentIndex === totalItems + itemsVisible) {
+                    currentIndex = itemsVisible;
+                    track.style.transition = 'none';
+                    track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+                }
+            }, parseFloat(rootStyles.getPropertyValue('--slide-speed') || 0.5) * 1000);
+        }
+    
+        // Automatic sliding
+        let autoSlide = setInterval(() => moveCarousel(1), 3000);
+    
+        // Pause auto-slide on hover
+        track.addEventListener('mouseenter', () => clearInterval(autoSlide));
+        track.addEventListener('mouseleave', () => {
+            autoSlide = setInterval(() => moveCarousel(1), 3000);
+        });
+    
+        // Adjust number of items on window resize
+        window.addEventListener('resize', () => {
+            itemsVisible = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--items-visible')) || 4;
+            track.style.transition = 'none';
+            currentIndex = itemsVisible;
+            track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+        });
+    </script>
+    <script>
+         // Wait for the video to end
+         const introVideo = document.getElementById('introVideo');
+        const videoContainer = document.getElementById('videoContainer');
+        const websiteContent = document.getElementById('websiteContent');
+
+        // When the video ends, show the website content and hide the video
+        introVideo.addEventListener('ended', function() {
+            videoContainer.style.display = 'none'; // Hide video
+            websiteContent.style.display = 'block'; // Show website content
+        });
+
+        // slider
+        const slides = document.querySelectorAll('.slide');
+        const navButtons = document.querySelectorAll('.slider-nav button');
+        const slider = document.getElementById('slider');
+        let currentSlide = 0;
+
+        function updateSlider() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active', 'inactive');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.add('inactive');
+                }
+                navButtons[index].classList.toggle('active', index === currentSlide);
+            });
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+
+        setInterval(nextSlide, 20000); // Auto-slide every 6 seconds
+
+        // menu
+       function openSidebar() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+
+        function toggleSearchBar() {
+            const searchBar = document.getElementById("searchBar");
+            if (searchBar.style.top === "0px") {
+                searchBar.style.top = "-280px";
+            } else {
+                searchBar.style.top = "0px";
+            }
+        }
+
+    </script>
+    <script>
+        AOS.init();
+      </script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+</body>
+
+</html>
