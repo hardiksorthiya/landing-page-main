@@ -379,6 +379,7 @@ body#landing-page {
   height: auto;
   border-radius: 8px;
   transition: transform 0.8s ease, filter 0.8s ease;
+  filter: brightness(70%);
 }
 
 .carousel-item-custom:hover img {
@@ -473,6 +474,16 @@ ul#tab-hp li a {
 ul#tab-hp li a.active {
   background: var(--primary-color);
   color: white;
+}
+.card-heading-hp-three {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  color: white;
+  font-family: poppins;
+}
+.carousel-item-custom:hover .card-heading-hp-three {
+  display: none;
 }
 /* footer */
 

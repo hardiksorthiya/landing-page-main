@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSIR-NAL</title>
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- script -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<!-- loader video -->
+<!-- <div class="video-container" id="videoContainer">
+    <video id="introVideo" width="100%" height="100%" autoplay muted>
+        <source src="assets/images/cloudes.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div> -->
+<body id="landing-page">
+    <!-- navbar -->
+    <div class="header">
+        
+        <div class="menu-icon" onclick="openSidebar()">
+            <span class="menu-text">Menu</span>
+            <img src="assets/images/humbarg.svg" alt="">
+        </div>
+        <div class="divider"></div>
+        <div class="logo">
+            <img src="assets/images/logo_white.svg" alt="Logo">
+        </div>
+        <div class="menu-links">
+        <a href="#">Career</a>
+        <a href="#">Partners</a>
+        <a href="#">Tenders</a>
+        <a href="#">Newsroom</a>
+        <a href="#">Services</a>
+        </div>
+        <div class="divider"></div>
+        <div class="search-icon" onclick="toggleSearchBar()">
+            <span class="menu-text">Search</span>
+            <img src="assets/images/search.svg" alt="">
+        </div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <div class="logo-with-text">
+            <img src="assets/images/logo_main.svg" alt="Logo">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">
+                <img src="assets/images/maki_cross.svg" alt="">
+            </a>
+
+        </div>
+            <a href="#">Home</a>
+            <a href="#">Career</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+
+            <div class="menu-links-sidebar">
+                <a href="#">Career</a>
+                <a href="#">Partners</a>
+                <a href="#">Tenders</a>
+                <a href="#">Newsroom</a>
+                <a href="#">Services</a>
+                </div>
+    </div>
+
+    <div id="searchBar" class="search-bar">
+        <div class="text-center h-text-s">What are you looking for?</div>
+        <div class="search-input-button">
+            <input type="text" placeholder="Search...">
+            <button class="Search-button">Search</button>
+        </div>
+        
+        <button class="close-search" onclick="toggleSearchBar()">
+            <img src="assets/images/maki_cross.svg" alt="">
+        </button>
+    </div>
+
+    <!-- hero-slider -->
+    <div class="hero" data-aos="fade-down" data-aos-duration="3000" >
+        <div class="slider-container">
+            <!-- Slider -->
+            <div class="slider" id="slider">
+                <div class="slide active" style="background-image: url('assets/images/slide_1.svg');">
+                    <video id="introVideo" width="100%" height="100%" autoplay muted loop>
+                        <source src="assets/images/cloudes.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="slide" style="background-image: url('assets/images/slide_2.svg');">
+                    <div class="text-content">
+                        <h1>About Us</h1>
+                        <p>We strive for excellence in every project.</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('assets/images/slide_3.svg');">
+                    <div class="text-content">
+                        <h1>Contact Us</h1>
+                        <p>Reach out today to start your journey with us.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Arrows -->
+            <button class="slider-arrow arrow-left" onclick="prevSlide()">
+                <img src="assets/images/left.svg" alt="">
+            </button>
+            <button class="slider-arrow arrow-right" onclick="nextSlide()">
+                <img src="assets/images/right.svg" alt="">
+            </button>
+            <!-- Navigation Dots -->
+            <div class="slider-nav" id="sliderNav">
+                <button class="active" onclick="goToSlide(0)"></button>
+                <button onclick="goToSlide(1)"></button>
+                <button onclick="goToSlide(2)"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- technlogy section  -->
+     <section id="technology-hp" class="mar-50">
+        <div class="container">
+            <div class="carousel-wrapper" data-aos="fade-up"
+            data-aos-duration="2000" >
+            <div class="carousel-track" id="carouselTrack" >
+                <!-- Carousel Items -->
+                <div class="carousel-item-custom" >
+                    <img src="assets/images/tech1.png" alt="Plane 1">
+                    <div class="card-heading-hp-three">
+                        <h4>Technology</h4>
+                    </div>
+                    <div class="carousel-content">
+                        <button class="view-more-btn">View More</button>
+                    </div>
+                </div>
+                <div class="carousel-item-custom" >
+                    <img src="assets/images/tech2.png" alt="Plane 1">
+                    <div class="card-heading-hp-three">
+                        <h4>Facilities</h4>
+                    </div>
+                    <div class="carousel-content">
+                        <button class="view-more-btn">View More</button>
+                    </div>
+                </div>
+                <div class="carousel-item-custom" >
+                    <img src="assets/images/tech3.png" alt="Plane 1">
+                    <div class="card-heading-hp-three">
+                        <h4>Research</h4>
+                    </div>
+                    <div class="carousel-content">
+                        <button class="view-more-btn">View More</button>
+                    </div>
+                </div>
+                <div class="carousel-item-custom" >
+                    <img src="assets/images/tech4.png" alt="Plane 1">
+                    <div class="card-heading-hp-three">
+                        <h4>Business</h4>
+                    </div>
+                    <div class="carousel-content">
+                        <button class="view-more-btn">View More</button>
+                    </div>
+                </div>
+                
+            </div>
+                
+            </div>
+        </div>
+     </section>
+
+
+
+      <!-- footer -->
+
+     <section id="footer">
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-uper-section">
+                            <h3 class="text-white">External Links</h3>
+                            <div class="footer-divider"></div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="text-white text-decoration-none">ITUWSTA 2024</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Pariksha Pe Charcha 2023</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">CSIR Technology Showcase</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">CSIR's COVID Portal</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">JIGYASA</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">PRABHASS</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Vidyanjali Volunteer Programme</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">National Government Services</a></li>
+                                      </ul>
+                                </div>
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="text-white text-decoration-none">National Voters' Service...</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">CSIR Website</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Vidya Lakshmi Portal</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">One CSIR</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Digital India</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">National Portal of India</a></li>
+                                        <li><a href="#" class="text-white text-decoration-none">Kisan Sabha App</a></li>
+                                      </ul>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-logo mb-3">
+                            <img src="assets/images/logo_white.svg" alt="CSIR-NAL Logo">
+                          </div>
+                          <div class="footer-about">
+                            <h5>National Aerosdivace Laboratories</h5>
+                            <p>National Aerospace Laboratories (NAL), a constituent of the Council of Scientific and Industrial Research (CSIR), India</p>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                                <h4 class="text-white">Follow us on</h4>
+                                <div class="social-media">
+                                    <a href="#facebook" ><img src="assets/images/facebook.svg" alt=""></a>
+                                    <a href="#twitter" ><img src="assets/images/titter.svg" alt=""></a>
+                                    <a href="#youtube" ><img src="assets/images/youtube.svg" alt=""></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="text-white">Contact Details</h3>
+                            <div class="footer-divider"></div>
+                            </div>
+                            
+                            <div class="col-lg-7">
+                                <div class="contact-information-footer">
+                                    <div class="icon-with-text-hp">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 20">
+                                            <defs>
+                                              <style>
+                                                .a {
+                                                  fill: #fff;
+                                                }
+                                              </style>
+                                            </defs>
+                                            <path class="a" d="M19,9A7,7,0,1,0,5,9a7,7,0,0,0,1.11,3.77h0L12,22l5.9-9.23h0A7,7,0,0,0,19,9Zm-7,3a3,3,0,1,1,2.12-.88A3,3,0,0,1,12,12Z" transform="translate(-5 -2)"/>
+                                          </svg>
+                                        <p class="content-social-footer">HAL Airport Road, Bangalore 560 017, India.</p>
+                                    </div>
+                                    <div class="icon-with-text-hp">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19.38 19.38">
+                                            <defs>
+                                              <style>
+                                                .a {
+                                                  fill: #fff;
+                                                }
+                                          
+                                                .a, .b {
+                                                  stroke: #fff;
+                                                  stroke-linecap: round;
+                                                  stroke-linejoin: round;
+                                                  stroke-width: 2px;
+                                                }
+                                          
+                                                .b {
+                                                  fill: none;
+                                                }
+                                              </style>
+                                            </defs>
+                                            <path class="a" d="M8,3c.5,0,2.5,4.5,2.5,5,0,1-1.5,2-2,3S9,13,10,14c.39.39,2,2,3,1.5s2-2,3-2c.5,0,5,2,5,2.5a4.36,4.36,0,0,1-3,4,6.89,6.89,0,0,1-4.5,0,10.93,10.93,0,0,1-6-3.5,10.93,10.93,0,0,1-3.5-6A6.89,6.89,0,0,1,4,6,4.36,4.36,0,0,1,8,3Z" transform="translate(-2.63 -2)"/>
+                                            <path class="b" d="M14,7a6.14,6.14,0,0,1,3,3" transform="translate(-2.63 -2)"/>
+                                            <path class="b" d="M15,3.25A8,8,0,0,1,20.75,9" transform="translate(-2.63 -2)"/>
+                                          </svg>
+                                          
+                                        <p class="content-social-footer">91-80-25273351-54 <small>(Kodihalli)</small><br>25223351-54 <small>(Belur)</small> </p>
+                                    </div>
+                                    <div class="icon-with-text-hp">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 17">
+                                            <defs>
+                                              <style>
+                                                .a {
+                                                  fill: #fff;
+                                                }
+                                              </style>
+                                            </defs>
+                                            <path class="a" d="M8,20V4H18V9h1a3,3,0,0,1,3,3v8ZM4.5,21A2.48,2.48,0,0,0,7,18.5v-8A2.48,2.48,0,0,0,4.5,8a2.41,2.41,0,0,0-1.78.73A2.41,2.41,0,0,0,2,10.5v8a2.41,2.41,0,0,0,.72,1.77A2.41,2.41,0,0,0,4.5,21ZM10,9h6V6H10Zm6,5a1,1,0,0,0,.71-.29A.94.94,0,0,0,17,13a1,1,0,1,0-1.71.71A.94.94,0,0,0,16,14Zm3,0a1,1,0,0,0,.71-.29A.94.94,0,0,0,20,13a1,1,0,1,0-1.71.71A.94.94,0,0,0,19,14Zm-3,3a1,1,0,0,0,.71-.29A.94.94,0,0,0,17,16a1,1,0,1,0-1.71.71A.94.94,0,0,0,16,17Zm3,0a1,1,0,0,0,.71-.29A.94.94,0,0,0,20,16a1,1,0,1,0-1.71.71A.94.94,0,0,0,19,17Zm-9,0h4V12H10Z" transform="translate(-2 -4)"/>
+                                          </svg>
+                                        <p class="content-social-footer">91-80-25260862<br>25270670</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                            <img src="assets/images/mapscaaner.png" alt="" width="100">    
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="divider-footer-hp"></div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="mb-0 text-white">© Copyright 2024 CSIR-NAL. All Rights Reserved</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="mb-0 text-white text-end">Page Last Updated: <span class="date-update"> Dec 20, 2024</span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+     </section>
+    
+
+
+    <!-- script -->
+    
+    
+    <script>
+         // Wait for the video to end
+         const introVideo = document.getElementById('introVideo');
+        const videoContainer = document.getElementById('videoContainer');
+        const websiteContent = document.getElementById('websiteContent');
+
+        // When the video ends, show the website content and hide the video
+        introVideo.addEventListener('ended', function() {
+            videoContainer.style.display = 'none'; // Hide video
+            websiteContent.style.display = 'block'; // Show website content
+        });
+
+        // slider
+        const slides = document.querySelectorAll('.slide');
+        const navButtons = document.querySelectorAll('.slider-nav button');
+        const slider = document.getElementById('slider');
+        let currentSlide = 0;
+
+        function updateSlider() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active', 'inactive');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.add('inactive');
+                }
+                navButtons[index].classList.toggle('active', index === currentSlide);
+            });
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+
+        setInterval(nextSlide, 20000); // Auto-slide every 6 seconds
+
+        // menu
+       function openSidebar() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+
+        function toggleSearchBar() {
+            const searchBar = document.getElementById("searchBar");
+            if (searchBar.style.top === "0px") {
+                searchBar.style.top = "-280px";
+            } else {
+                searchBar.style.top = "0px";
+            }
+        }
+
+    </script>
+    <script>
+        AOS.init();
+      </script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+</body>
+
+</html>
